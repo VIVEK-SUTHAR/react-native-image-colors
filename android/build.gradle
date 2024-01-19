@@ -65,7 +65,14 @@ android {
       jvmTarget = JavaVersion.VERSION_11.majorVersion
     }
   }
+  compileOptions {
+      sourceCompatibility JavaVersion.VERSION_17
+      targetCompatibility JavaVersion.VERSION_17
+    }
 
+    kotlinOptions {
+      jvmTarget = JavaVersion.VERSION_17.majorVersion
+    }
   defaultConfig {
     minSdkVersion safeExtGet("minSdkVersion", 21)
     targetSdkVersion safeExtGet("targetSdkVersion", 34)
